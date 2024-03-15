@@ -15,6 +15,9 @@
     // chain-length = <25>; // Uncomment if using only per-key LEDs.
 };
  */
+    #define DEFAULT 0
+    #define RAISE 1
+    #define LOWER 2
 
 / {
 
@@ -30,8 +33,8 @@
             bindings = <
             &kp ESC   &kp Q &kp W &kp E &kp R &kp T                                                  &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
             &kp TAB   &kp A &kp S &kp D &kp F &kp G                                                  &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-            &mt LSHFT RET &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &kp LSHFT            &mo 1   &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
-                                  &kp LGUI &kp RALT &mo 2 &kp RCTRL &kp ESC        &kp RET &kp SPACE &mo 1 &kp BSPC &kp RALT
+            &mt LSHFT RET &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &kp LSHFT            &mo RAISE   &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
+                                  &kp LGUI &kp RALT &mo LOWER &kp RCTRL &kp ESC        &kp RET &kp SPACE &mo RAISE &kp BSPC &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -41,7 +44,7 @@
             /-----------------------------------------------------------------------------------------------------------------------------------
             // |   `   |  1   |  2   |  3   |  4   |  5   |                                         |  6   |  7   |  8   |  9   |  0   |  DEL |
             // |  DEL  |  \   |  F2  |  <   |  >   |  F5  |                                         |  F6  |  4   |  5   |  6   |  -   |   /  |
-            // |       |  -   |  =   |  \[  |  ]   |  F11 |      |      |      |      |      |      |  F12 |  1   |  2   |  3   |  +   |   *  |
+            // |       |  -   |  =   |  [   |  ]   |  F11 |      |      |      |      |      |      |  F12 |  1   |  2   |  3   |  +   |   *  |
             //                       |      |      |      |      |      |      |      |      |      |      |      |  0   |
             bindings = <
             &kp TILDE &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5              &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &kp DEL
