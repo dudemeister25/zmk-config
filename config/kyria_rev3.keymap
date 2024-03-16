@@ -47,9 +47,9 @@
             // |       |  -   |  =   |  [   |  ]   |  F11 |      |      |      |      |      |      |  F12 |  1   |  2   |  3   |  +   |   *  |
             //                       |      |      |      |      |      |      |      |      |      |      |      |  0   |
             bindings = <
-            &kp TILDE &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5              &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &kp DEL
-            &kp DEL &kp BACKSLASH &kp F2     &bt BT_SEL 3 &bt BT_SEL 4 &trans                    &kp F6 &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp MINUS &kp SLASH
-            &trans &trans &trans &trans &trans &trans &trans &trans        &trans &trans &kp F12 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp PLUS &kp ASTERISK
+            &kp GRAVE &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5              &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &kp DEL
+            &kp DEL &kp BACKSLASH &kp F2 &kp LESS_THAN &kp GREATER_THAN &kp F5                    &kp F6 &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp MINUS &kp SLASH
+            &trans &kp MINUS &kp EQUAL &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp F11 &trans &trans        &trans &trans &kp F12 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp PLUS &kp ASTERISK
                                  &trans &trans &trans &trans &trans        &trans &trans &trans &trans &kp NUMBER_0
             >;
 
