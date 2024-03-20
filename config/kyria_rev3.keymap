@@ -81,7 +81,7 @@
             //                       |      |      |      |      |      |      |      |      |      |      |      |      |
             bindings = <
             &trans &trans &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2              &trans &trans &trans &trans &trans &trans
-            &kp DEL &trans &trans     &bt BT_SEL 3 &bt BT_SEL 4 &trans                   &trans &LEFT_ARROW &DOWN_ARROW &UP_ARROW &RIGHT_ARROW &trans
+            &kp DEL &trans &trans     &bt BT_SEL 3 &bt BT_SEL 4 &trans                   &trans &kp LEFT_ARROW &kp DOWN_ARROW &kp UP_ARROW &kp RIGHT_ARROW &trans
             &trans &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans &trans
                                  &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans
             >;
