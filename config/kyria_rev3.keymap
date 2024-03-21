@@ -45,8 +45,8 @@
             //-----------------------------------------------------------------------------------------------------------------------------------
             // |   `   |  1   |  2   |  3   |  4   |  5   |                                         |  6   |  7   |  8   |  9   |  0   |  DEL |
             // |  DEL  |  \   |  F2  |  <   |  >   |  F5  |                                         |  F6  |  4   |  5   |  6   |  -   |   /  |
-            // |       |  -   |  =   |  [   |  ]   |  F11 |      |      |      | ** |      |      |  F12 |  1   |  2   |  3   |  +   |   *  |
-            //                       |      |      |      |      |      |      | ** |      |      |      |      |  0   |
+            // |       |  -   |  =   |  [   |  ]   |  F11 |      |      |      |  **  |      |      |  F12 |  1   |  2   |  3   |  +   |   *  |
+            //                       |      |      |      |      |      |      |  **  |      |      |      |      |  0   |
             bindings = <
             &kp GRAVE &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5              &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &kp DEL
             &kp DEL &kp BACKSLASH &kp F2 &kp LESS_THAN &kp GREATER_THAN &kp F5                    &kp F6 &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp MINUS &kp SLASH
@@ -61,12 +61,12 @@
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |   ~   |  !   |  @   |  #   |  $   |  %   |                                         |  ^   |  &   |  *   |  (   |  )   | BSPC |
             // |  DEL  |  F1  |  F2  |  F3  |  F4  |  F5  |                                         |  F6  |  _   |  +   |  {   |  }   |  |   |
-            // |       |  F7  |  F8  |  F9  |  F10 |  F11 |      |      |      | ** |      |      |  F12 |  =   |  |   | HOME |  END |      |
-            //                       |      |      |      |      |      |      | ** |      |      |      |      |      |
+            // |       |  F7  |  F8  |  F9  |  F10 |  F11 |      |      |      |  **  |      |      |  F12 |  =   |  |   | HOME |  END |      |
+            //                       |      |      |      |      |      |      |  **  |      |      |      |      |      |
             bindings = <
             &kp TILDE &kp EXCLAMATION &kp AT_SIGN &kp HASH &kp DOLLAR &kp PERCENT                       &kp CARET &kp AMPERSAND &kp ASTERISK &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp BSPC
             &kp DEL   &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                                        &kp F6 &kp UNDERSCORE &kp PLUS &kp LEFT_BRACE &kp RIGHT_BRACE &kp PIPE
-            &trans    &kp F7  &kp F8 &kp F9 &kp F10 &kp F11 &trans &trans              &trans &trans &kp F12 &kp EQUAL &kp PIPE &trans &trans &trans
+            &trans    &kp F7  &kp F8 &kp F9 &kp F10 &kp F11 &trans &trans              &trans &trans &kp F12 &kp EQUAL &kp PIPE &HOME &END &trans
                                  &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans
             >;
 
@@ -76,12 +76,12 @@
         function_layer {
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |       |      |BT_CLR|BTSEL0|BTSEL1|BTSEL2|                                         |      |      |      |      |      |      |
-            // |  DEL  |      |      |BTSEL3|BTSEL4|      |                                         |      | LEFT | DOWN |  UP  | RIGHT|      |
+            // |       |      |      |BTSEL3|BTSEL4|      |                                         |      | LEFT | DOWN |  UP  | RIGHT|      |
             // |       |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
             //                       |      |      |      |      |      |      |      |      |      |      |      |      |
             bindings = <
             &trans &trans &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2              &trans &trans &trans &trans &trans &trans
-            &kp DEL &trans &trans     &bt BT_SEL 3 &bt BT_SEL 4 &trans                   &trans &kp LEFT_ARROW &kp DOWN_ARROW &kp UP_ARROW &kp RIGHT_ARROW &trans
+            &trans &trans &trans     &bt BT_SEL 3 &bt BT_SEL 4 &trans                   &trans &kp LEFT_ARROW &kp DOWN_ARROW &kp UP_ARROW &kp RIGHT_ARROW &trans
             &trans &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans &trans
                                  &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans
             >;
