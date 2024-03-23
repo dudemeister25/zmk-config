@@ -22,13 +22,19 @@
     #define FUNC 4
 
 / {
-
-    keymap {
+    conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
             if-layers = <1 2>;
             then-layer = <4>;
         };
+    };
+};
+
+/ {
+
+    keymap {
+        compatible = "zmk,keymap";
 
         default_layer {
             // ---------------------------------------------------------------------------------------------------------------------------------
