@@ -24,7 +24,7 @@
 / {
 
     keymap {
-        compatible = "zmk,keymap,conditional-layers";
+        compatible = "zmk,conditional-layers";
         tri_layer {
             if-layers = <1 2>;
             then-layer = <4>;
@@ -78,7 +78,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
-        nav_layer { // NEED TO REMOVE THE BT STUFF
+        nav_layer {
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |       |      |      |      |      |      |                                         |      |      |      |      |      |      |
             // |       |      |      |      |      |      |                                         |      | LEFT | DOWN |  UP  | RIGHT|      |
