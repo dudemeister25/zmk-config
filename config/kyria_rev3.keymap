@@ -38,15 +38,15 @@
 
         default_layer {
             // ---------------------------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  Q  |  W  |  E   |   R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   | BSPC |
-            // |  TAB  |  A  |  S  |  D   |   F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
-            // |  RET* |  Z  |  X  |  C   |   V   |  B   | L SHIFT | L SHIFT | ** |  HOME?  |  END? |  N   |  M    |  ,    |  .   |   /   | RET* | *enter when tapped, shft when held
-            //                     | GUI  | R-ALT |  L2  |  RCTRL  |   ESC   | ** |   RET   |  SPACE  |  L1  |     | NAV layer |
+            // |  ESC  |  Q  |  W  |  E   |   R   |  T   |                                            |  Y   |  U  |  I    |  O   |   P   | BSPC |
+            // |  TAB  |  A  |  S  |  D   |   F   |  G   |                                            |  H   |  J  |  K    |  L   |   ;   |   '  |
+            // |  RET* |  Z  |  X  |  C   |   V   |  B   | L SHIFT | L SHIFT | ** |  HOME   |   END   |  N   |  M  |  ,    |  .   |   /   | RET* | *enter when tapped, shft when held
+            //                     | GUI  | R-ALT |  L2  |  RCTRL  |  SPACE  | ** |         |  SPACE  |  L1  |     | NAV layer |
             bindings = <
             &kp ESC   &kp Q &kp W &kp E &kp R &kp T                                                  &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
             &kp TAB   &kp A &kp S &kp D &kp F &kp G                                                  &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-            &mt LSHFT RET &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &kp LSHFT            &mo RAISE   &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
-                                  &kp LGUI &kp RALT &mo LOWER &kp RCTRL &kp ESC        &kp RET &kp SPACE &mo RAISE &trans &tog NAV
+            &mt LSHFT RET &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &kp LSHFT          &kp HOME &kp END &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
+                            &kp LGUI &kp RALT &mo LOWER &kp RCTRL &kp SPACE          &trans &kp SPACE &mo RAISE &trans &tog NAV
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -57,12 +57,12 @@
             // |   `   |  1   |  2   |  3   |  4   |  5   |                                         |  6   |  7   |  8   |  9   |  0   |  DEL |
             // |  DEL  |  \   |  F2  |  <   |  >   |  F5  |                                         |  F6  |  4   |  5   |  6   |  -   |   /  |
             // |       |  -   |  =   |  [   |  ]   |  F11 |      |      |      |  **  |      |      |  F12 |  1   |  2   |  3   |  +   |   *  |
-            //                       |      |      |      |      |      |      |  **  |      |      |      |      |  0   |
+            //                       |      |      |      |      |      |      |  **  |      |      |      |  0   |      |
             bindings = <
             &kp GRAVE &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5              &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &kp DEL
             &kp DEL &kp BACKSLASH &kp F2 &kp LESS_THAN &kp GREATER_THAN &kp F5                    &kp F6 &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp MINUS &kp SLASH
             &trans &kp MINUS &kp EQUAL &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp F11 &trans &trans        &trans &trans &kp F12 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp PLUS &kp ASTERISK
-                                 &trans &trans &trans &trans &trans        &trans &trans &trans &trans &kp NUMBER_0
+                                              &trans &trans &trans &trans &trans        &trans &trans &trans &kp NUMBER_0 &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -104,18 +104,19 @@
             // ---------------------------------------------------------------------------------------------------------------------------------
             // | BT_CLR|      |      |BTSEL0|BTSEL1|BTSEL2|                                       |      |      |      |      |      |      |
             // |       |      |      |BTSEL3|BTSEL4|      |                                       |      |      |      |      |      |      |
-            // |       |      |      |      |      |      |      |      |      | ** |      |      |      |      |      |      |      |      |
+            // |       |      |      |      |      |      |      |      |      | ** |      |      |      |      |      |      | CAPS |      |
             //                       |      |      |      |      |      |      | ** |      |      |      |      |      |
             bindings = <
             &bt BT_CLR &trans &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2                        &trans &trans &trans &trans &trans &trans
             &trans &trans &trans     &bt BT_SEL 3 &bt BT_SEL 4 &trans                              &trans &trans &trans &trans &trans &trans
-            &trans &trans &trans &trans &trans &trans &trans &trans                  &trans &trans &trans &trans &trans &trans &trans &trans
+            &trans &trans &trans &trans &trans &trans &trans &trans                  &trans &trans &trans &trans &trans &trans &kp CAPSLOCK &trans
                                             &trans &trans &trans &trans &trans       &trans &trans &trans &trans &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
+        // This was the default layer that came with the kb
         // function_layer {
         //     // ---------------------------------------------------------------------------------------------------------------------------------
         //     // | BT_CLR|      |      |BTSEL0|BTSEL1|BTSEL2|                                       |      |      |      |      |      |      |
