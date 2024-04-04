@@ -30,8 +30,27 @@
         combo_refresh {
             timeout-ms = <50>;
             key-positions = <16 17>;
-            // sk is sticky key so that ctrl is held down for refresh
             bindings = <&kp F5>;
+        };
+        combo_l_arrow {
+            timeout-ms = <50>;
+            key-positions = <19 20>;
+            bindings = <&kp LEFT_ARROW>;
+        };
+        combo_u_arrow {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&kp UP_ARROW>;
+        };
+        combo_d_arrow {
+            timeout-ms = <50>;
+            key-positions = <19 22>;
+            bindings = <&kp DOWN_ARROW>;
+        };
+        combo_r_arrow {
+            timeout-ms = <50>;
+            key-positions = <21 22>;
+            bindings = <&kp RIGHT_ARROW>;
         };
     };
 };
