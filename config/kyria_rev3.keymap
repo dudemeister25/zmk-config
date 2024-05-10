@@ -39,12 +39,12 @@
         };
         combo_u_arrow {
             timeout-ms = <50>;
-            key-positions = <20 21>;
+            key-positions = <8 9>;
             bindings = <&kp UP_ARROW>;
         };
         combo_d_arrow {
             timeout-ms = <50>;
-            key-positions = <19 22>;
+            key-positions = <20 21>;
             bindings = <&kp DOWN_ARROW>;
         };
         combo_r_arrow {
@@ -56,6 +56,26 @@
             timeout-ms = <50>;
             key-positions = <30 31>;
             bindings = <&kp C_PLAY_PAUSE>;
+        };
+        combo_undo {
+            timeout-ms = <50>;
+            key-positions = <25 26>;
+            bindings = <&kp RCTRL &kp Z>;
+        };
+        combo_cut {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&kp RCTRL &kp X>;
+        };
+        combo_copy {
+            timeout-ms = <50>;
+            key-positions = <27 28>;
+            bindings = <&kp RCTRL &kp C>;
+        };
+        combo_paste {
+            timeout-ms = <50>;
+            key-positions = <28 29>;
+            bindings = <&kp RCTRL &kp V>;
         };
     };
 };
@@ -85,8 +105,8 @@
             //-----------------------------------------------------------------------------------------------------------------------------------
             // |   `   |  1   |  2   |  3   |  4   |  5   |                                         |  6   |  7   |  8   |  9   |  0   |  DEL |
             // |  DEL  |  \   |  F2  |  <   |  >   |  F5  |                                         |  F6  |  4   |  5   |  6   |  -   |   /  |
-            // |       |  -   |  =   |  [   |  ]   |  F11 |      |      |      |  **  |      |      |  F12 |  1   |  2   |  3   |  +   |   *  |
-            //                       |      |      |      |      |      |      |  **  |      |      |      |  0   |      |
+            // |       |  -   |  =   |  [   |  ]   |  F11 | Vol -| Vol +|      **     |      |      |  F12 |  1   |  2   |  3   |  +   |   *  |
+            //                       |      |      |      |      |      |      **     |      |      |      |  0   |      |
             bindings = <
             &kp GRAVE &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5              &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &kp DEL
             &kp DEL &kp BACKSLASH &kp F2 &kp LESS_THAN &kp GREATER_THAN &kp F5                    &kp F6 &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp MINUS &kp SLASH
@@ -101,8 +121,8 @@
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |   ~   |  !   |  @   |  #   |  $   |  %   |                                         |  ^   |  &   |  *   |  (   |  )   | BSPC |
             // |  DEL  |  F1  |  F2  |  F3  |  F4  |  F5  |                                         |  F6  |  _   |  +   |  {   |  }   |  |   |
-            // |       |  F7  |  F8  |  F9  |  F10 |  F11 |      |      |      |  **  |      |      |  F12 |  =   |  |   | HOME |  END |      |
-            //                       |      |      |      |      |      |      |  **  |      |      |      |      |      |
+            // |       |  F7  |  F8  |  F9  |  F10 |  F11 | Vol -| Vol +|      **     |      |      |  F12 |  =   |  |   | HOME |  END |      |
+            //                       |      |      |      |      |      |      **     |      |      |      |      |      |
             bindings = <
             &kp TILDE &kp EXCLAMATION &kp AT_SIGN &kp HASH &kp DOLLAR &kp PERCENT                   &kp CARET &kp AMPERSAND &kp ASTERISK &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp BSPC
             &kp DEL   &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                                        &kp F6 &kp UNDERSCORE &kp PLUS &kp LEFT_BRACE &kp RIGHT_BRACE &kp PIPE
